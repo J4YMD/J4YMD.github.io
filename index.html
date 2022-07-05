@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>For project Only</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+      body {
+        width: 100%;
+      }
+      /*HEADER START HERE*/
+      #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 80px;
+        background: rgb(52, 49, 81);
+        box-shadow: 0 5px 15px rgb(144, 144, 144);
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+      }
+      #navibar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #navibar li {
+        list-style: none;
+        padding: 0 40px;
+        position: relative;
+      }
+      #navibar li a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        transition: 0.3s ease;
+      }
+      #navibar li a:hover,
+      #navibar li a.active {
+        color: rgb(203, 192, 255);
+        transition: 00.3s ease;
+      }
+      #navibar li a.active::after,
+      #navibar li a:hover::after {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: rgb(203, 192, 255);
+        transition: 00.3s ease;
+        position: absolute;
+        bottom: -4px;
+        left: 40px;
+      }
+      /*HEADER END HERE*/
+
+      /*HOMEPAGE START HERE*/
+      #hero {
+        background-image: url("IMAGES/Book.jpg");
+        height: 90vh;
+        width: 100%;
+        background-size: cover;
+        background-position: top 25% right 0;
+        padding: 0 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+      }
+      #hero h4 {
+        padding-bottom: 15px;
+      }
+      #hero h1 {
+        color: rgb(108, 91, 192);
+      }
+      #hero button {
+        background-color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 8px;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        transition: 0.4s ease-in-out;
+      }
+      #hero button:hover {
+        background-color: rgb(108, 91, 192);
+        color: white;
+      }
+
+      .section-p1 {
+        padding: 90px 100px;
+      }
+      /*HOMEPAGE END HERE*/
+
+      /*PRODUCT START HERE*/
+      #products {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+      #products .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      #products .One {
+        width: 32%;
+        min-width: 250px;
+        padding: 10px 12px;
+        cursor: pointer;
+        box-shadow: 1px 1px 40px rgb(233, 233, 233);
+        transition: 0.3s ease-in-out;
+        margin: 15px 0;
+        position: relative;
+      }
+      #products .One:hover {
+        box-shadow: 1px 1px 54px rgb(185, 185, 185);
+        transition: 0.4s ease-in-out;
+      }
+      #products .One img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      #products .One .des span {
+        color: rgb(52, 49, 81);
+        font-size: 12px;
+      }
+      #products .One .des {
+        text-align: start;
+        padding: 10px 0;
+      }
+      #products .One .des h5 {
+        padding-top: 7px;
+        font-size: 20px;
+      }
+      #products .One .des h4 {
+        padding-top: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: black;
+      }
+      #products .One .des i {
+        font-size: 12px;
+        color: rgb(178, 151, 0);
+      }
+
+      #products .One .palette {
+        font-size: 20px;
+        margin: 10px 10px;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+      }
+      #products .One .cart {
+        font-size: 20px;
+        margin: 10px 50px;
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+      }
+
+      /*PRODUCT END HERE*/
+
+      /*FETURES*/
+      #feature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: rgb(52, 49, 81);
+        background-position: 20% 30%;
+      }
+
+      #feature .fe-box {
+        width: 180px;
+        text-align: center;
+        padding: 0px 0px;
+        border-radius: 8px;
+        margin: 0px 0;
+        transition: 0.3s ease-in-out;
+      }
+      #feature .fe-box a {
+        align-items: center;
+        font-weight: 10px;
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+      }
+      #feature .fe-box .pagelines {
+        margin-top: 20px;
+        font-size: 38px;
+        margin-bottom: 1px;
+        color: rgb(255, 255, 255);
+      }
+
+      #feature .fe-box :hover {
+        transition: 0.4s ease-in-out;
+      }
+
+      #feature .fe-box h6 {
+        font-size: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        color: white;
+      }
+      .section-m1 {
+        margin: 40px 0;
+      }
+      /*FETURES END HERE*/
+
+      /*FOOTER*/
+      .col ul {
+        display: flex;
+        flex-direction: row;
+        margin-right: 50px;
+        list-style: none;
+      }
+      .col li {
+        margin-top: 5px;
+        margin: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .col img {
+        margin-top: 20px;
+      }
+
+      footer {
+        margin-left: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      footer .col {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+      footer .logo {
+        margin-bottom: 1px;
+      }
+      .sotre {
+        margin-bottom: 100px;
+      }
+      footer h4 {
+        font-size: 10px;
+        padding-bottom: 3px;
+      }
+      footer p {
+        font-size: 13px;
+        padding-bottom: 3px;
+        margin: 0 0 8px 0;
+      }
+
+      footer a {
+        font-size: 13px;
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+      /*FOOTER END HERE*/
+    </style>
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"
+        ><img src="IMAGES/LOGO/JYMD.png" alt="Logo of JYMD" width="100px"
+      /></a>
+      <div>
+        <ul id="navibar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li>
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="hero">
+      <h4>THIS IS FOR PROJECT USE ONLY</h4>
+      <h2>Super value deals</h2>
+      <h1>On all our products</h1>
+      <p>Spend less and save more with coupons up to 70% off!</p>
+      <button>Shop Now</button>
+    </section>
+
+    <section id="products" class="section-p1">
+      <h2>Our Latest Book Design</h2>
+      <p>Modern design and what's cool you can design your own book cover</p>
+
+      <div class="container">
+        <div class="One">
+          <img src="IMAGES/books/book1.jpg" alt="" width="400px" />
+          <div class="des">
+            <span>Personal journals</span>
+            <h5>Classic Blue</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <h4>￥600</h4>
+          </div>
+          <i class="fa-solid fa-palette palette"></i>
+          <i class="fa-solid fa-cart-shopping cart"></i>
+        </div>
+
+        <div class="One">
+          <img src="IMAGES/books/white.jpg" alt="" width="400px" />
+          <div class="des">
+            <span>Personal journals</span>
+            <h5>Classic White</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <h4>￥600</h4>
+          </div>
+          <i class="fa-solid fa-palette palette"></i>
+          <i class="fa-solid fa-cart-shopping cart"></i>
+        </div>
+
+        <div class="One">
+          <img src="IMAGES/books/book3.jpg" alt="" width="500px" />
+          <div class="des">
+            <span>Personal journals</span>
+            <h5>Classic Gray</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <h4>￥600</h4>
+          </div>
+          <i class="fa-solid fa-palette palette"></i>
+          <i class="fa-solid fa-cart-shopping cart"></i>
+        </div>
+      </div>
+    </section>
+
+    <section id="feature" class="section-m1" class>
+      <div class="fe-box">
+        <a href="#"><i class="fa-solid fa-truck-fast"></i></a>
+        <h6>Free Shipping</h6>
+        <h6>When you spend ￥30</h6>
+      </div>
+
+      <div class="fe-box">
+        <a href="#"><i class="fa-solid fa-tag"></i></a>
+        <h6>Returns</h6>
+        <h6>30 days returns</h6>
+      </div>
+
+      <div class="fe-box">
+        <i class="fa-brands fa-pagelines pagelines"></i>
+        <h6>Enviroment friendly</h6>
+        <h6>No plastic use</h6>
+      </div>
+      <div class="fe-box">
+        <a href="#"><i class="fa-solid fa-gift"></i></a>
+        <h6>Gift Cards</h6>
+        <h6>Instant & easy gifting</h6>
+      </div>
+    </section>
+
+    <footer class="section-1">
+      <div class="col">
+        <h4>About Us</h4>
+        <p>
+          If uniqueness is your thing, then your at the right place. <br />We
+          keep and value your design so every small details that you want in
+          your personal journal we care.
+        </p>
+        <img class="logo" src="IMAGES/LOGO/JYMD2.png" alt="" width="50px" />
+        <ul>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-facebook-square"></i></li>
+          <li><i class="fa-brands fa-pinterest-square"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+        <p>JYMD shop also avilable on:</p>
+        <a href="#"
+          ><img class="sotre" src="IMAGES/sotre.png" alt="" width="200px"
+        /></a>
+      </div>
+
+      <div class="col">
+        <h4>Quick Links</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Loyalty Rewards</a>
+        <a href="#">FAQ</a>
+        <a href="#">Blog</a>
+        <a href="#">Search</a>
+      </div>
+
+      <div class="col">
+        <h4>Location</h4>
+        <p>JYMD Shop</p>
+        <p>Tokyo Japan</p>
+        <p>Shinagawa Area</p>
+        <p>info@JYMDshop.com</p>
+        <p>080008990</p>
+      </div>
+
+      <div class="col">
+        <h4>Payment method</h4>
+        <img src="IMAGES/pay.png" alt="" width="200px" />
+      </div>
+
+      <div class="copyright">
+        <p>© 2022, JYMD</p>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</html>
